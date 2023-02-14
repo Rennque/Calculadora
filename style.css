@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --bg-calculator-color: #2d2a37;
+  --bg-calculator-color-200: #595761;
+  --text-color-1: #ebebeb;
+  --text-color-2: #6b6b6b;
+  --text-color-3: #975dfa;
+
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #807ece 0%, #8e7ece 100%);
+  font-size: 1.6rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.app.calculator {
+  background-color: var(--bg-calculator-color);
+  height: fit-content;
+  width: fit-content;
+  gap: 2.6rem;
+
+  padding: 5.4rem 3.2rem 3.2rem 3.6rem;
+  border-radius: 4.8rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04),
+    0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26),
+    0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+    inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+
+.panel {
+  /* width: 300px; */
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.calculation {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-align: end;
+  color: var(--text-color-2);
+
+  margin-left: 1.8rem;
+  margin-right: 2.2rem;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 3.6rem;
+  line-height: 5rem;
+  color: var(--text-color-1);
+
+  margin-left: 1.8rem;
+  margin-right: 2.2rem;
+}
+
+.result p,
+.calculation p {
+  width: 24rem;
+  overflow-x: scroll;
+  text-align: end;
+}
+.calculation p {
+  width: 27rem;
+}
+
+.result p::-webkit-scrollbar,
+.calculation p::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.result p::-webkit-scrollbar-track,
+.calculation p::-webkit-scrollbar-track {
+  background: var(--bg-calculator-color);
+}
+
+.result p::-webkit-scrollbar-thumb,
+.calculation p::-webkit-scrollbar-thumb {
+  background-color: var(
+    --bg-calculator-color-200
+  ); /* color of the scroll thumb */
+  border-radius: 2rem;
+}
+
+.result i {
+  color: var(--text-color-2);
+  font-size: 2rem;
+}
+
+.keyboard {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+
+.keyboard button {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  border-radius: 500%;
+  margin: 0.6rem;
+  width: 6.4rem;
+  height: 6.4rem;
+
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #2d2a37;
+  color: var(--text-color-1);
+  border: none;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+  /* outline: none; */
+}
+
+.keyboard button:hover {
+  filter: brightness(0.7);
+}
+
+.keyboard button:active {
+  filter: brightness(2);
+}
+
+.keyboard button#clear {
+  color: var(--text-color-3);
+}
+
+.keyboard button.operator {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0.01%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #462878;
+}
+
+.keyboard button.operator:hover {
+  filter: brightness(1.5);
+}
+
+.keyboard button.operator:active {
+  filter: brightness(2);
+}
+
+.keyboard button#equal {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    #7f45e2;
+}
+
+.keyboard button#equal:hover {
+  filter: brightness(1.4);
+}
+
+.keyboard button#equal:active {
+  filter: brightness(0.8);
+}
+
+.keyboard button i {
+  margin-top: 0.6rem;
+  margin-left: 0.1rem;
+  font-size: 2.8rem;
+}
+
+@media screen and (max-width: 390px) {
+  :root {
+    font-size: 50%;
+  }
+}

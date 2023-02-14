@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <div class="app">
+    <div class="app calculator">
+      <div class="panel">
+        <div class="calculation">
+          <p id="calculation-text">1+1</p>
+        </div>
+        <div class="result">
+          <i class="ph-equals" id="equal"></i>
+          <p id="calculation-result">2</p>
+        </div>
+      </div>
+  
+      <div class="keyboard" id="keyboard">
+        <button class="top left" id="clear">CE</button>
+        <button class="top" id="backspace">C</button>
+        <button class="top operator" id="percent"><i id="percent" class="ph-percent"></i></button>
+        <button class="top right operator" id="division"><i class="ph-divide" id="division"></i></button>
+  
+        <button class="left" id="number">7</button>
+        <button id="number">8</button>
+        <button id="number">9</button>
+        <button class="right operator" id="multiply"><i id="multiply" class="ph-x"></i></button>
+  
+        <button class="left" id="number">4</button>
+        <button id="number">5</button>
+        <button id="number">6</button>
+        <button class="right operator" id="subtraction"><i id="minus" class="ph-minus"></i></button>
+  
+        <button class="left" id="number">1</button>
+        <button id="number">2</button>
+        <button id="number">3</button>
+        <button class="right operator" id="sum"><i id="sum" class="ph-plus"></i></button>
+  
+        <button class="bottom left" id="plus-minus"><i class="ph-plus-minus" id="plus-minus"></i></button>
+        <button id="number">0</button>
+        <button id="number">,</button>
+        <button class="bottom right operator" id="equal"><i id="equal" class="ph-equals"></i></button>
+      </div>
+    </div>  
+  </div>
+</body>
+
+</html>
